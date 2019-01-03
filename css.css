@@ -1,55 +1,230 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
 }
-.toper{
-    width:80%;
-    height:30px;
-    margin:0 auto;
-    border-bottom:1px solid #ccc;
+
+#Thead {
+    width: 100%;
+    height: 130px;
     background: #f3f5f7;
 }
-.topleft div{
-    float:left;
-    width:65px;
+
+/* 顶部区域 */
+.toper {
+    width: 70%;
+    height: 30px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(190, 188, 218, 0.5);
+    background: #f3f5f7;
+}
+
+.topleft div {
+    float: left;
+    width: 65px;
     font-size: 12px;
-    line-height:30px;
+    line-height: 30px;
     text-align: center;
 }
-.topleft div a:link{
-    color:black;
+
+.topleft div a:link {
+    color: black;
 }
-.topleft div a:hover{
-    color:red;
+
+.topleft div a:hover {
+    color: red;
 }
-.topright li{
-    float:right;
-    line-height:30px;
+
+.topright li {
+    float: right;
+    line-height: 30px;
     text-align: center;
     list-style-type: none;
-    font-size:13px;
-    width:80px;
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+    position: relative;
+}
+
+.topright li p {
+    display: inline;
+}
+
+.topright li span {
+    width: 11px;
+    height: 30px;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+}
+
+.topright li img {
+    width: 11px;
+    height: 13px;
+}
+
+.topright li .hide {
+    width: 80px;
+    height: 30px;
+    display: none;
+}
+
+.topright li:hover {
+    height: 90px;
+    background: white;
+    border: #ccc 1px solid;
+}
+
+/* logo区域 */
+.logoArea {
+    width: 70%;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 50px;
+    width: 150px;
+}
+
+.logo img {
+    height: 50px;
+    width: 150px;
+}
+
+.search {
+    width: 352px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -160px;
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    width: 50px;
+    height: 32px;
+    background: #000;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+/* 购物车 */
+.shopcar {
+    width: 150px;
+    height: 30px;
+    background: red;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -15px;
+    line-height: 30px;
+}
+
+.shopcar span {
+    padding-left: 13px;
+}
+
+.shopcar :nth-child(1) {
+    width: 13px;
+    height: 13px;
+    padding-left: 5px;
+}
+
+.shopcar :nth-child(5) {
+    width: 13px;
+    height: 13px;
+    padding-left: 10px;
+}
+
+/* .helppos{
+    width:150px;
     height:30px;
+    position: relative;
+} */
+.shophide {
+    width: 300px;
+    height: 370px;
+    position: absolute;
+    top: 65px;
+    right: -152px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    display: none;
+
 }
-.topright li p{
-    display:inline;
+
+.shophide .first {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 20px 0 20px;
+    font-size: 14px;
 }
-.topright li span{
-    width:11px;
-    height:30px;
+
+.buy {
+    height: 280px;
+    overflow-y: scroll;
 }
-.topright li img{
-    width:11px;
-    height:13px;
+
+.buy div {
+    height: 56px;
+    width: 300px;
+    line-height: 50px;
+    position: relative;
 }
-.topright li .hide{
-    width:80px;
-    height:30px;
-    display:none;
+
+.buy div img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
 }
-.topright li:hover{
-    height:90px;
-    background:white;
-    border:#ccc 1px solid;
+
+.buy div span {
+    display: block;
+    width: 240px;
+    height: 25px;
+    font-size: 13px;
+    position: absolute;
+    top: 5px;
+    left: 50px;
 }
+
+.buy div b {}
+
+.add {
+    height: 50px;
+    line-height: 50px;
+    margin: 0 20px;
+    border-top: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.add button {
+    background: red;
+    border: none;
+    margin-left: 40px;
+    color: white;
+    width: 60px;
+    height: 30px;
+}
+
+/* 导航 */
+.daohang {}
