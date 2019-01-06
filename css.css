@@ -17,6 +17,7 @@
     margin: 0 auto;
     border-bottom: 1px solid rgba(190, 188, 218, 0.5);
     background: #f3f5f7;
+    min-width: 885px;
 }
 
 .topleft div {
@@ -33,6 +34,9 @@
 
 .topleft div a:hover {
     color: red;
+}
+.toper .topleft .cred a{
+    color:red;
 }
 
 .topright li {
@@ -69,6 +73,9 @@
     display: none;
     z-index: 10;
 }
+.topright li .hide div:hover{
+    background: #f3f5f7;
+}
 
 .topright li:hover {
     height: 90px;
@@ -83,6 +90,7 @@
     height: 100px;
     margin: 0 auto;
     position: relative;
+    min-width:885px;
 }
 
 .logo {
@@ -137,6 +145,7 @@
     margin-top: -15px;
     line-height: 30px;
     z-index: 9;
+    cursor: pointer;
 }
 
 .shopcar span {
@@ -149,11 +158,11 @@
     padding-left: 5px;
 }
 
-.shopcar :nth-child(5) {
+/* .shopcar :nth-child(5) {
     width: 13px;
     height: 13px;
     padding-left: 10px;
-}
+} */
 
 /* .helppos{
     width:150px;
@@ -165,12 +174,13 @@
     height: 370px;
     position: absolute;
     top: 65px;
-    right: -152px;
+    right: -150px;
     overflow: hidden;
     border: 1px solid #ccc;
     display: none;
     background: white;
     z-index:15;
+    /* cursor: pointer; */
 
 }
 
@@ -193,6 +203,23 @@
     position: relative;
     border-bottom:1px solid #ccc;
     margin:0 20px 0 20px;
+    /* cursor: pointer; */
+}
+.buy .buy1:hover{
+    background: #f3f5f7;
+}
+.buy .buy1 a:link{
+    color:black;
+}
+.buy .buy1 a:hover{
+    color:red;
+}
+.buy .buy1 span{
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top:10px;right:5px;
+    cursor: pointer;
 }
 
 .buy div img {
@@ -236,11 +263,13 @@
     border-top: 1px solid #ccc;
     font-size: 13px;
 }
-
+.add span{
+    padding-left:10px ;
+}
 .add button {
     background: red;
     border: none;
-    margin-left: 40px;
+    margin-left: 30px;
     color: white;
     width: 60px;
     height: 30px;
@@ -257,11 +286,15 @@
     text-align:center;
     line-height: 30px;
     font-size: 13px;
-    margin-left:-40px;
+    margin-left:-35px;
 }
 .daohang ul li{
     display: inline-block;
     width:80px;
+    cursor: pointer;
+}
+.daohang ul li:hover{
+    color:red;
 }
 /* banner区 */
 .banner{
@@ -343,16 +376,22 @@
     background: red;
     position: absolute;
     top:-35px;
-    left:0;
+    left:0px;
+    z-index: 20;
 }
 .bannerLeft div{
     color:white;
     height:25px;
     line-height: 25px;
     font-size: 12px;
-    margin-left:20px;
+    /* margin-left:20px; */
     position: relative;
+    cursor: pointer;
 }
+.bannerLeft div span{
+    margin-left:20px;
+}
+
 .bannerLeft .leftT{
     height:35px;
     line-height: 35px;
@@ -373,7 +412,68 @@
     height:13px;
     position: absolute;
     top:12px;
-    left:0px;
+    left:20px;
+}
+/* banner左边部分隐藏菜单 */
+.hidemenu{
+    width:59%;
+    height:424px;
+    position: absolute;
+    top:0;
+    left:21%;
+    /* margin: 0 auto; */
+    z-index:11;
+    background: white;
+    border:1px #ccc solid;
+    display:none;
+    padding-left:-3px; 
+    z-index: 20;
+}
+.hidecontainer{
+    position: absolute;
+    top:0;
+    left:21%;
+    width:59%;
+    height:390px;
+    z-index:12;
+    margin-top:10px;
+    display: none;
+    z-index: 21;
+}
+.hcontainer1{
+    width:100%;
+    height:12.5%;
+    /* line-height: 48.75px; */
+    padding-left: 30px;
+    position: relative;
+    
+}
+.hcontainer1 span{
+    font-size: 11px;
+    cursor: pointer;
+}
+.hcontainer1 span:hover{
+    color:red;
+}
+.hcontainer1 b{
+    font-size: 11px;
+    line-height: 45px;
+}
+.hcontainer1 .hc{
+    width:70%;
+    position: absolute;
+    top:50%;
+    left:90px;
+    margin-top:-13px;
+    /* display: table;
+    vertical-align: middle; */
+}
+.hcontainer1 .hc2{
+    width:70%;
+    position: absolute;
+    top:50%;
+    left:90px;
+    margin-top:-13px;
 }
 /* banner右边区域？ */
 .bannerright{
@@ -453,6 +553,7 @@
     position: relative;
     border-right:1px solid #f3f5f7;
     border-bottom:1px solid #f3f5f7;
+    cursor: pointer;
 }
 .bannerright .R2 .notright{
     border-right:none;
@@ -480,57 +581,5 @@
 .R3 img{
     width:100%;
     height:100%;
-}
-.hidemenu{
-    width:59%;
-    height:424px;
-    position: absolute;
-    top:0;
-    left:21%;
-    /* margin: 0 auto; */
-    z-index:11;
-    background: white;
-    border:1px #ccc solid;
-    display:none;
-}
-.hidecontainer{
-    position: absolute;
-    top:0;
-    left:21%;
-    width:59%;
-    height:390px;
-    z-index:12;
-    margin-top:10px;
-    display: none;
-}
-.hcontainer1{
-    width:100%;
-    height:12.5%;
-    /* line-height: 48.75px; */
-    padding-left: 30px;
-    position: relative;
-    
-}
-.hcontainer1 span{
-    font-size: 11px;
-}
-.hcontainer1 b{
-    font-size: 11px;
-    line-height: 45px;
-}
-.hcontainer1 .hc{
-    width:70%;
-    position: absolute;
-    top:50%;
-    left:90px;
-    margin-top:-13px;
-    /* display: table;
-    vertical-align: middle; */
-}
-.hcontainer1 .hc2{
-    width:70%;
-    position: absolute;
-    top:50%;
-    left:90px;
-    margin-top:-13px;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 var index = 0,
-    timer = null;
+    timer = null,
+    x = 0;
 $(document).ready(function(event){
     $('.topright li').on("mouseover",function(event){
         $(this).children(".hide").css({"display":"block","z-index":10})
@@ -76,6 +77,44 @@ $(document).ready(function(event){
         $('.bottom').attr({"src":"img/23.png"});
         $(this).css({"background":"red","color":"white","border":"1px solid #ccc"});
         $('.shopcar .shu').css({"color":"#ccc"});
+    })
+    $('.shopcar').on("click",function(){
+        $('.shophide').css({"display":"block"});
+    })
+    $('.shophide').on("mouseleave",function(){
+        $('.shophide').css({"display":"none"});
+    })
+    // 改变banner左边菜单hover
+    $('.bannerLeft div').not('.leftT').on("mouseover",function(){
+        $(this).css({"background":"white","color":"red"});
+        $(this).find("img").attr({"src":"img/24.png"});
+    })
+    $('.bannerLeft div').not('.leftT').on("mouseout",function(){
+        $(this).css({"background":"red","color":"white"});
+        $(this).find("img").attr({"src":"img2/23.png"});
+    })
+    // 显示banner左边的隐藏菜单
+    $('.bannerLeft div').not(".leftT").on("mouseover",function(){
+        $('.hidemenu').css({"display":"block"})
+        x = $(this).index();
+        $('.hidecontainer').eq(x).css({"display":"block"});
+    })
+    $('.bannerLeft div').not(".leftT").on("mouseout",function(){
+        $('.hidemenu').css({"display":"block"})
+        x = $(this).index();
+        $('.hidecontainer').eq(x).css({"display":"none"});
+    })
+    $('.bannerLeft').on("mouseout",function(){
+        $('.hidemenu').css({"display":"none"});
+        $('.hidecontainer').css({"display":"none"})
+    })
+    $('.hidecontainer').on("mouseover",function(){
+        $('.hidemenu').css({"display":"block"});
+        $(this).css({"display":"block"})
+    })
+    $('.hidecontainer').on("mouseout",function(){
+        $('.hidemenu').css({"display":"none"});
+        $('.hidecontainer').css({"display":"none"})
     })
 })
 // 改变图片
