@@ -7,7 +7,7 @@ $(document).ready(function(event){
     $('.topright li').on("mouseout",function(event){
         $(this).children(".hide").css({"display":"none"})
     })
-})
+
 
     // 图片自动轮播
     
@@ -64,6 +64,20 @@ $(document).ready(function(event){
         }
         changeImage(index);
     })
+    // 购物车
+    $('.shopcar').on("mouseover",function(){
+        $('.shopcar .car').attr({"src":"img/25.png"});
+        $('.bottom').attr({"src":"img/22.png"});
+        $(this).css({"background":"white","color":"red","border":"1px solid #ccc"});
+        $('.shopcar .shu').css({"color":"#ccc"});
+    })
+    $('.shopcar').on("mouseout",function(){
+        $('.shopcar .car').attr({"src":"img/26.png"});
+        $('.bottom').attr({"src":"img/23.png"});
+        $(this).css({"background":"red","color":"white","border":"1px solid #ccc"});
+        $('.shopcar .shu').css({"color":"#ccc"});
+    })
+})
 // 改变图片
 function changeImage(index){
     $('.bannerImage img').each(function(x,element){
