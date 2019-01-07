@@ -583,3 +583,144 @@
     height:100%;
     cursor: pointer;
 }
+.floor1{
+    width:70%;
+    height:500px;
+    min-width: 885px;
+    position: relative;
+    margin-top:30px;
+}
+.floorT{
+    width:200px;
+    height:20px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.floorT div{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background: #000;
+    color:white;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+    /* display: inline-block; */
+    float:left;
+}
+.floorT span{
+    /* float:left; */
+    display: inline-block;
+    height:20px;
+    width:100px;
+    line-height: 20px;
+    padding-left:10px;
+    /* padding-bottom:2px; */
+    font-weight: bold;
+    position: absolute;
+    top:-1px;
+    left:20px;
+
+}
+.floorright{
+    /* width:150px; */
+    height:30px;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.floorright a,.floorright span{
+    display: inline-block;
+    margin-right:10px;
+    color:#ccc;
+}
+.floorright a:link{
+    color:#ccc;
+}.floorright a:hover{
+    color:red;
+}
+/* 楼层区内容 */
+.cont1{
+    width:100%;
+    /* height:360px; */
+    border-top:1px red solid;
+    position: absolute;
+    top:35px;
+    z-index: 0;
+    /* display: none; */
+}
+.cont1 div,.cont2 div,.cont3 div{
+    width:16.1%;
+    height:180px;
+    /* float:left; */
+    display: inline-block;
+}
+.cont3 div:hover{
+    border:1px solid #ccc;
+}
+.cont1 div:hover{
+    border:1px solid #ccc;
+}
+.cont2 div:hover{
+    border:1px solid #ccc;
+}
+.floorcont div dl{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.floorcont div dt{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.floorcont div dd{
+    width: 100%;height:10%;
+    font-size: 12px;
+    position: absolute;
+    top:63%;
+    text-align: center;
+}
+.floorcont div dd:nth-child(3){
+    width: 100%;height:10%;
+    font-size: 12px;
+    position: absolute;
+    top:75%;
+    text-align: center;
+}
+.floorcont div img{
+    width:60%;
+    height:50%;
+    position: absolute;
+    top:10%;
+    right:0;
+    left:0;
+    margin:auto;
+}
+.floorright a{
+    position: relative;
+}
+.floorright .biu{
+    position: absolute;
+    left:0;
+    top:29px;
+    left:50%;
+    margin-left:-7px;
+    /* transform: rotate(180deg); */
+    z-index: 15;
+    background-color:white;
+}
+/* 楼层区域隐藏内容 */
+.cont2,.cont3{
+    width:100%;
+    /* height:360px; */
+    border-top:1px red solid;
+    position: absolute;
+    top:35px;
+    z-index: 0;
+    /* display: none; */
+}
+.hide{
+    display: none;
+}

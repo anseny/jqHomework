@@ -1,6 +1,10 @@
 var index = 0,
     timer = null,
     x = 0;
+var  floorrightA = $('.floorright a');
+var floorrightA1 = $('.floorright a').eq(0).find("img");
+var floorrightA2 = $('.floorright a').eq(1).find("img");
+var floorrightA3 = $('.floorright a').eq(2).find("img");
 $(document).ready(function(event){
     $('.topright li').on("mouseover",function(event){
         $(this).children(".hide").css({"display":"block","z-index":10})
@@ -116,6 +120,26 @@ $(document).ready(function(event){
         $('.hidemenu').css({"display":"none"});
         $('.hidecontainer').css({"display":"none"})
     })
+    // 改变楼层内容
+    floorrightA.eq(1).on("mouseover",function(){
+        changefloor("2","3","1")
+        // floorrightA2.removeClass("hide");
+        // floorrightA1.addClass("hide");
+        // floorrightA3.addClass("hide");
+    });
+    floorrightA.eq(2).on("mouseover",function(){
+        changefloor("3","1","2")
+        // floorrightA3.removeClass("hide");
+        // floorrightA1.addClass("hide");
+        // floorrightA2.addClass("hide");
+    });
+    floorrightA.eq(0).on("mouseover",function(){
+        changefloor("1","2","3")
+        // floorrightA1.removeClass("hide");
+        // floorrightA2.addClass("hide");
+        // floorrightA3.addClass("hide");
+    });
+    console.log(floorrightA1)
 })
 // 改变图片
 function changeImage(index){
@@ -125,4 +149,19 @@ function changeImage(index){
     $('.dots span').removeClass("firstdots");
     $('.dots span').eq(index).addClass("firstdots");
     $(".bannerImage img").eq(index).css({"display":"block"});
+}
+// 添加hide class
+function changefloor(a,b,c){
+    fa =".j"+a;
+    fb = ".j"+b;
+    fc = ".j"+c; 
+    ca = ".cont"+a;
+    cb = ".cont"+b;
+    cc = ".cont"+c;
+    $(fa).removeClass("hide");
+    $(ca).removeClass("hide");
+    $(fb).addClass("hide");
+    $(cb).addClass("hide");
+    $(fc).addClass("hide");
+    $(cc).addClass("hide");
 }
